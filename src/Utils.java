@@ -77,15 +77,6 @@ public class Utils {
         button.setFocusable(false);
         return button;
     }
-    public static JTextField newTextField(Dimension dim, Color color, Font font){
-
-        JTextField textField = new JTextField();
-        textField.setPreferredSize(dim);
-        textField.setBackground(Color.WHITE);
-        textField.setForeground(color);
-        textField.setFont(font);
-        return  textField;
-    }
     public static <e> JComboBox<e> newComboBox(ComboBoxModel<e> dataModel, Font font){
 
         JComboBox<e> comboBox = new JComboBox<>(dataModel);

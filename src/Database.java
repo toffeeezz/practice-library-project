@@ -61,9 +61,6 @@ public class Database extends Utils {
             System.out.println("No existing file found. Returning empty list.");
         }
     }
-    public static void testAcc() {
-        accountList.add(new Account("Ryan Gosling", AccessLevel.INTERMEDIATE, "123456"));
-    }
     public static boolean isValidAcc(String id) {
         for (Account account : accountList) {
             if (id.equalsIgnoreCase(account.id()))
@@ -116,9 +113,6 @@ public class Database extends Utils {
     }
     public static ArrayList<Book> getBookList(){
         return (ArrayList<Book>) bookList;
-    }
-    static boolean checkAccessLevel(Book book, AccessLevel lvl){
-        return lvl.getAccessLevel() >= book.accessLevel().getAccessLevel();
     }
     static AccessLevel stringToAccess(String txt){
         return switch (txt) {
@@ -181,12 +175,6 @@ enum AccessLevel{
     public String toString() {return name;}
     public int getAccessLevel() {
         return lvl;
-    }
-    public AccessLevel getAccessFromString(String string){
-        if(string.equalsIgnoreCase(this.name)){
-            return this;
-        }
-        return null;
     }
 }
 
