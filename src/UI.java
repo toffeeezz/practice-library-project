@@ -215,7 +215,7 @@ public class UI extends Utils{
         con.add(accessLabelP);
 
         JPanel accessDropP = newPanel(160, 30, 50, 180, Color.RED, new BorderLayout());
-        JComboBox<String> accessDrop = newComboBox(new DefaultComboBoxModel<>(Database.getAccessLevels()), new Font("Times New Roman", Font.PLAIN, 14));
+        JComboBox<AccessLevel> accessDrop = newComboBox(new DefaultComboBoxModel<>(Database.getAccessLevels()), new Font("Times New Roman", Font.PLAIN, 14));
         accessDrop.setAlignmentY(Component.CENTER_ALIGNMENT);
         accessDrop.setFocusable(false);
 
