@@ -12,3 +12,6 @@ To create a high access level acccoun
 - Sign Up
 - Choose the highest access level
 - Input (123456) when prompted for the admin code
+
+Importing accounts and libraries
+- Either replace the .json file with a new one or edit the existing .json files
