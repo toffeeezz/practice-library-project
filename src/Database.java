@@ -17,7 +17,7 @@ public class Database extends Utils {
 
     private static final AdminAccount admin = new AdminAccount("John Mangubat", "Admin", "094703", "123456");
     private static final ArrayList<Account> accountList = new ArrayList<>();
-    private static final String[] accessLevels = {"Novice", "Intermediate", "Experienced", "Masteral", "Origin"};
+    private static final String[] accessLevels = {"Novice", "Intermediate", "Expert", "Masteral", "Origin"};
     private static final List<Book> bookList = new ArrayList<>();
 
     public static void loadLibrary(){
@@ -78,8 +78,8 @@ public class Database extends Utils {
     public static boolean checkAdminCode(String code) {
         return code.equalsIgnoreCase(admin.pin());
     }
-    public static String[] getAccessLevels() {
-        return accessLevels;
+    static AccessLevel[] getAccessLevels() {
+        return AccessLevel.values();
     }
     static String createAccount(String name, AccessLevel accessLevel) {
         String id;
@@ -160,7 +160,7 @@ enum Author{
 enum AccessLevel{
     NOVICE("Novice", 0),
     INTERMEDIATE("Intermediate", 1),
-    EXPERT("Experienced", 2),
+    EXPERT("Expert", 2),
     MASTERAL("Masteral", 3),
     ORIGIN("Origin", 4);
 
